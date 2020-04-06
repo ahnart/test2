@@ -1,0 +1,127 @@
+Mybatis 에서 inner join 해서 select 하면 error가 나요...
+
+혼자 공부중 막히는 부분이 있어서 
+
+구글링을 해보고 해봐도 해결을 못해서 
+
+이렇게 질문 드립니다 
+
+먼저 에러 메시지는 ㅇ래와 같습니다.
+
+-----------------------------------------------
+
+ERROR: org.springframework.web.context.ContextLoader - Context initialization failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in ServletContext resource [/WEB-INF/spring/root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [D:\2020_JAVA\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring_EX_02\WEB-INF\classes\mappers\memberMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'CartListDTO'.  Cause: java.lang.ClassNotFoundException: Cannot find class: CartListDTO
+
+-----------------------------------------------
+
+에러 내용으로는 DTO를 못불러오는 것 같은데요
+아래 XML 문서와 DTO 테이블 정보 입니다
+
+XML
+	<select id="cartList" resultType="CartListDTO">
+			
+			select 
+	         c.cartNum, c.u_id, c.g_no, c.cartStock, c.addDate, 
+	        g.g_no, g.g_price, g.g_thum 
+			from tbl_cart c 
+			inner join goods g on c.g_no = g.g_no
+			where c.u_Id = ${u_Id} 
+			
+	</select>
+
+DTO
+
+package com.example.dto;
+
+import java.util.Date;
+
+public class CartListDTO {
+	
+	private int cartNum;
+	private String u_Id;
+	private int g_no;
+	private int cartStock;
+	private Date addDate;
+	
+
+	private String g_name;
+	private String g_price;
+	private String g_thum;
+	
+	
+
+	public String getG_name() {
+		return g_name;
+	}
+	public void setG_name(String g_name) {
+		this.g_name = g_name;
+	}
+	public String getG_price() {
+		return g_price;
+	}
+	public void setG_price(String g_price) {
+		this.g_price = g_price;
+	}
+	public String getG_thum() {
+		return g_thum;
+		
+		
+		
+	}
+	public void setG_thum(String g_thum) {
+		this.g_thum = g_thum;
+	}
+	public int getCartNum() {
+		return cartNum;
+	}
+	public void setCartNum(int cartNum) {
+		this.cartNum = cartNum;
+	}
+	public String getU_Id() {
+		return u_Id;
+	}
+	public void setU_Id(String u_Id) {
+		this.u_Id = u_Id;
+	}
+	public int getG_no() {
+		return g_no;
+	}
+	public void setG_no(int g_no) {
+		this.g_no = g_no;
+	}
+	public int getCartStock() {
+		return cartStock;
+	}
+	public void setCartStock(int cartStock) {
+		this.cartStock = cartStock;
+	}
+	public Date getAddDate() {
+		return addDate;
+	}
+	public void setAddDate(Date addDate) {
+		this.addDate = addDate;
+	}
+}
+DB Table
+
+mysql> select  @rownum:=@rownum+1 as no,
+    ->          c.cartNum, c.u_id, c.g_no, c.cartStock, c.addDate,
+    ->         g.g_no, g.g_price, g.g_no
+    -> from tbl_cart c
+    -> inner join goods g on c.g_no = g.g_no
+    -> where c.u_Id = 'qq';
++------+---------+------+------+-----------+------------+------+---------+------+
+| no   | cartNum | u_id | g_no | cartStock | addDate    | g_no | g_price | g_no |
++------+---------+------+------+-----------+------------+------+---------+------+
+|    1 |       2 | qq   |   99 |         1 | 2020-03-17 |   99 | 4400    |   99 |
+|    2 |       3 | qq   |   99 |         7 | 2020-03-17 |   99 | 4400    |   99 |
+|    3 |       4 | qq   |   99 |         6 | 2020-03-17 |   99 | 4400    |   99 |
+|    4 |       5 | qq   |   99 |        88 | 2020-03-17 |   99 | 4400    |   99 |
++------+---------+------+------+-----------+------------+------+---------+------+
+4 rows in set (0.00 sec)
+SQL콘솔에서는 이상없이 출력이 되는데요 
+
+뭐가 문제인제 해결을 이틀째 해결을 못하고 있습니다 
+감사합니다 

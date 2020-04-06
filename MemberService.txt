@@ -1,0 +1,26 @@
+package com.example.service;
+
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import com.example.dto.UserDTO;
+
+public interface MemberService {
+	
+	public List<UserDTO> selectMember() throws Exception;
+	
+	
+	
+	//로그인 체크
+	public boolean loginCheck(UserDTO userDTO, HttpSession httpSession);
+	
+	//회원가입
+	public void signup(UserDTO userDTO) throws Exception;
+	
+	//로그인
+	public UserDTO signin(UserDTO userDTO) throws Exception;
+	
+	//로그아웃
+	public void signout(HttpSession httpSession) throws Exception;
+}

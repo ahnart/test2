@@ -1,0 +1,7 @@
+create table test(id varchar2(100), pw varchar2(100), name varchar2(100));
+INSERT INTO test (
+id, 
+pw, 
+name) 
+values 
+('id1', 'pw1','name1');

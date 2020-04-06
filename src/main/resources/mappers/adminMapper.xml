@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="memberMapper">
+
+	
+	
+	<!-- 주문목록 보기 -->
+	<select id="aorderList" resultType="com.example.dto.OrderDTO">
+		SELECT orderId, u_Id,
+			orderRec, u_Addr1, u_Addr2, u_Addr3, orderPhon, amount, orderDate, delivery
+		FROM
+			tbl_order	
+		order by orderId DESC
+	</select>
+	
+	<!-- 주문 목록 상세보기 -->
+	<select id="aorderView" resultType="com.example.dto.OrderListDTO">
+		SELECT
+			o.orderId, o.u_Id, o.orderRec, o.u_Addr1, o.u_Addr2, o.u_Addr3, 
+			o.amount, o.orderDate, o.delivery,
+			d.orderDetailsNum, d.g_no, d.cartStock,
+			g.g_name, g.g_thum, g_price
+		FROM tbl_order o
+		INNER JOIN tbl_order_details d
+			ON o.orderId = d.orderId
+		INNER JOIN goods g
+			ON d.g_no = g.g_no
+		WHERE o.orderId = #{orderId}
+	</select>
+
+	<update id="delivery">
+		UPDATE tbl_order 
+			SET delivery = #{delivery}
+		WHERE orderId = #{orderId}
+	</update>
+	
+	<!-- 상품 수량 조절 -->
+	<update id="changeStock">
+		UPDATE goods
+		SET g_amount = g_amount - #{g_amount}
+		WHERE g_no = #{g_no}
+	</update>
+	
+	<!-- 상품 수량 조절 보조 -->
+	<select id="changeStock_sub" resultType="com.example.dto.OrderDetailsDTO">
+		SELECT
+			orderId, g_no, cartStock
+		FROM tbl_order_details
+		WHERE orderId = #{orderId}	
+	</select>
+	
+	
+	<!-- 소감댓글 전체 확인 -->
+	<select id="allReply" resultType="com.example.dto.replyListDTO">
+		SELECT r.g_no, r.u_Id, r.reNum, r.reCon, r.reDate, u.u_id, g.g_name
+     	   FROM g_reply r
+        INNER JOIN user u
+       		ON r.u_Id = u.u_id
+       	 INNER JOIN goods g
+       		ON r.g_no = g.g_no
+        ORDER BY g.g_no DESC
+	</select>
+	
+	<!-- 소감댓글 삭제 -->
+	<delete id="deleteAllReply">
+		DELETE FROM g_reply
+		WHERE reNum = #{reNum}
+	</delete>
+
+
+
+
+
+</mapper>

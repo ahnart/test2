@@ -1,0 +1,57 @@
+package com.example.dao;
+
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Repository;
+
+import com.example.dto.UserDTO;
+
+@Repository
+public class MemberDAOImpl implements MemberDAO {
+	
+	@Inject
+	private SqlSession sqlSession;
+	
+	private static final String Namespace = "com.example.mapper.memberMapper";
+	
+	@Override
+	public List<UserDTO> selectMember() throws Exception {
+		//회원리스트 보기
+		return sqlSession.selectList(Namespace+".selectMember");
+	}
+
+	@Override
+	public void signup(UserDTO userDTO) throws Exception {
+		// 회원가입
+		sqlSession.insert(Namespace + ".signup", userDTO);
+	}
+
+	@Override
+	public UserDTO signin(UserDTO userDTO) throws Exception {
+		// 로그인
+		return sqlSession.selectOne(Namespace + ".signin", userDTO);
+	}
+
+	@Override
+	public boolean loginCheck(UserDTO userDTO) {
+		// 로그인 체크
+		String name = sqlSession.selectOne(Namespace + ".loginCheck", userDTO);
+		return (name == null) ? false : true;
+	}
+
+	@Override
+	public UserDTO viewUser(UserDTO userDTO) {
+		// 로그인 정보
+		return sqlSession.selectOne(Namespace + ".viewUser", userDTO);
+	}
+	
+	
+	@Override
+	public void logout(HttpSession httpSession) {
+		//로그아웃
+	}
+}

@@ -1,0 +1,13 @@
+
+테이블 조인 g_reply + user
+select r.g_no, r.u_Id, r.reNum, r.reCon, r.reDate, u.u_id 
+		from g_reply r 
+		inner join user u on r.u_Id = u.u_id 
+		where g_no = 99;
+
+
+테이블 조인 g_reply + user
+select r.g_no, r.u_Id, r.reNum, r.reCon, r.reDate, u.u_id 
+		from g_reply r 
+		inner join user u on r.u_Id = u.u_id 
+		where g_no = 99;

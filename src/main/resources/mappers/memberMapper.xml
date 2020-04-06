@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="memberMapper">
+
+
+	<select id="selectMember" resultType="userDTO">
+		SELECT * FROM user ORDER BY u_no DESC
+	</select>
+	
+	<!-- 회원가입 -->
+	<insert id="insert">
+		insert into user (u_id, u_pw)
+		values(#{u_id}, #{u_pw})
+	</insert>
+	
+	<!-- 로그인 -->
+	<select id="signin" resultType="userDTO">
+		SELECT u_id, u_pw, level 
+		FROM user 
+		WHERE u_id = #{u_id} 
+			AND u_pw = #{u_pw}
+	</select>
+	
+	<delete id="mDelete">
+		delete from user where u_no = #{u_no}
+	</delete>
+
+	<!-- 상품 등록 -->
+	<insert id="register">
+		insert into goods
+		(g_name, g_price, g_content, g_img, g_thum, g_amount)
+		values
+		(#{g_name}, #{g_price}, #{g_content}, #{g_img},
+		#{g_thum}, #{g_amount})
+	</insert>
+
+	<select id="g_list" resultType="goodsDTO">
+		select
+		g_no, g_name, g_price, g_content, g_date, g_img, g_thum, g_amount
+		from goods
+		order by g_no DESC;
+	</select>
+
+
+	<delete id="gDelete">
+		delete from goods where g_no = #{g_no}
+	</delete>
+
+	<!-- 상품 조회 + 카테고리 조인 -->
+	<select id="view" parameterType="int" resultType="goodsDTO">
+		select
+		    g_no, g_name, g_price, g_content, g_date, g_img, g_thum, g_amount
+		        from goods
+		where g_no = #{g_no}
+	</select>
+
+	<!-- 게시물 수정 -->
+	<update id="gModify">
+		update goods
+		set
+		g_name = #{g_name},
+		g_price = #{g_price},
+		g_content = #{g_content},
+		g_img = #{g_img},
+		g_thum = #{g_thum},
+		g_amount =
+		#{g_amount}
+		where
+		g_no =
+		#{g_no}
+	</update>
+
+	<!-- 게시물 총 갯수 -->
+	<select id="count" resultType="int">
+		select count(g_no) from goods
+	</select>
+
+	<select id="listPage" parameterType="HashMap" resultType="goodsDTO">
+		select
+		g_no, g_name, g_price,
+		g_content, g_date, g_thum, g_amount
+		from goods
+		order by
+		g_no DESC
+		limit
+		#{displayPost}, #{postNum}
+
+	</select>
+	<!-- 카테고리 -->
+
+	
+	
+
+</mapper>

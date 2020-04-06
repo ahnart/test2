@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="memberMapper">
+
+	<insert id="registReply">
+		insert into g_reply (g_no, u_Id, reCon, reDate)
+		   
+		values (#{g_no}, #{u_Id}, #{reCon}, now())
+	</insert>
+
+	<select id="replyList" resultType="com.example.dto.replyListDTO">
+		SELECT
+		r.g_no, r.u_Id, r.reNum, r.reCon, r.reDate, u.u_id
+		FROM
+		g_reply r
+		inner join user u
+		on r.u_Id = u.u_id
+		WHERE
+		g_no = #{g_no}
+		order by r.reNum desc
+	</select>
+
+
+	<!-- 카트 담기 -->
+	<insert id="addCart">
+		insert into tbl_cart (u_Id, g_no, cartStock, addDate)
+		    values (#{u_Id}, #{g_no}, #{cartStock}, now())
+	</insert>
+	
+	
+	
+	<select id="cartList" resultType="com.example.dto.CartListDTO">
+
+		SELECT
+		c.cartNum, c.u_Id, c.g_no, c.cartStock, c.addDate,
+		g.g_no, g.g_price, g.g_thum, g_name
+		FROM tbl_cart c
+		inner join goods g
+		on c.g_no = g.g_no
+		WHERE c.u_Id = #{u_Id}
+		order by c.cartNum desc
+
+	</select>
+	<delete id="deleteReply">
+		delete from
+		g_reply
+		where
+		reNum = #{reNum}
+		and u_Id = #{u_Id}
+	</delete>
+	
+	<select id="replyUserCheck" resultType="String">
+		select u_Id
+		from
+			g_reply
+		where
+			reNum = #{reNum}
+	</select>
+
+	<update id="modifyReply">
+		update g_reply
+		set
+		reCon = #{reCon}
+		where
+		reNum = #{reNum}
+		and u_Id = #{u_Id}
+	</update>
+
+	<!-- 카트삭제 -->
+	<delete id="deleteCart">
+		delete tbl_cart
+		where cartNum = #{cartNum}
+		and u_Id = #{u_Id}
+	</delete>
+
+
+	<!-- 주문 정보 -->
+	<insert id="orderInfo">
+		INSERT INTO tbl_order
+			(orderId, u_Id, orderRec, u_Addr1, u_Addr2, u_Addr3, orderPhon, amount,
+			orderDate)
+		VALUES
+			(#{orderId}, #{u_Id}, #{orderRec}, #{u_Addr1}, #{u_Addr2}, #{u_Addr3},
+			#{orderPhon}, #{amount}, now())
+	</insert>
+
+	<insert id="orderInfo_Details">
+		INSERT INTO tbl_order_details
+			(orderDetailsNum, orderId, g_no, cartStock)
+		SELECT
+			cartNum, #{orderId}, g_no, cartStock
+		FROM tbl_cart 
+		<!-- where orderId = #{orderId} -->
+	</insert>
+	
+	<!-- 장바구니 비우기 -->
+	<delete id="cartAllDelete">
+		DELETE FROM tbl_cart
+		WHERE u_Id = #{u_Id}
+	</delete>
+	
+	<!-- 주문목록 보기 -->
+	<select id="orderList" resultType="com.example.dto.OrderDTO">
+		SELECT orderId, u_Id,
+			orderRec, u_Addr1, u_Addr2, u_Addr3, orderPhon, amount, orderDate, delivery
+		FROM
+			tbl_order
+		WHERE u_Id = #{u_Id}
+		ORDER BY orderDate DESC	
+	</select>
+	
+	<!-- 주문 목록 상세보기 -->
+	<select id="orderView" resultType="com.example.dto.OrderListDTO">
+		SELECT
+			o.orderId, o.u_Id, o.orderRec, o.u_Addr1, o.u_Addr2, o.u_Addr3,
+			o.amount, o.orderDate, o.delivery,
+			d.orderDetailsNum, d.g_no, d.cartStock,
+			g.g_name, g.g_thum, g_price
+		FROM tbl_order o
+		INNER JOIN tbl_order_details d
+			ON o.orderId = d.orderId
+		INNER JOIN goods g
+			ON d.g_no = g.g_no
+		WHERE o.u_Id = #{u_Id}
+		AND o.orderId = #{orderId}
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>

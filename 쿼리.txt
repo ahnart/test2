@@ -1,0 +1,22 @@
+
+	<select id="loginCheck" resultType="String">
+		select u_id from user where u_id = #{u_id} and u_pw = #{u_pw}
+	</select>
+	
+	<select id="viewUser" resultType="com.example.dto.UserDTO">
+		select u_id, u_pw from user where u_id = #{u_id} and u_pw = {u_pw}
+	</select>
+
+
+
+	//로그인 체크
+	public boolean loginCheck(UserDTO userDTO, HttpSession httpSession);
+	
+	//회원가입
+	public void signup(UserDTO userDTO) throws Exception;
+	
+	//로그인
+	public UserDTO signin(UserDTO userDTO) throws Exception;
+	
+	//로그아웃
+	public void signout(HttpSession httpSession) throws Exception;

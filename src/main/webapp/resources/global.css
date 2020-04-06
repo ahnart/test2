@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+/* Type Selector */
+* {
+	-webkit-text-size-adjust: none;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 맑은 고딕, 돋움, Arial, sans-serif;
+	font-size: 15px;
+	color: #333;
+	letter-spacing: -0.5px;
+	line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6, strong, th {
+	font-weight: normal;
+	font-family: 맑은 고딕, 돋움, Arial, sans-serif;
+}
+
+button, input[type=submit], input[type=reset], input[type=button] {
+	overflow: visible;
+	cursor: pointer;
+}
+
+input, textarea, button, pre {
+	font-family: 맑은 고딕, 돋움, Arial, sans-serif;
+	font-size: 100%;
+	border-radius: 0;
+}
+
+li {
+	list-style: none;
+}
+
+img, fieldset {
+	border: none;
+	vertical-align: top;
+}
+
+hr {
+	display: none;
+}
+
+em, address, cite {
+	font-style: normal;
+}
+
+caption {
+	height: 0px;
+	text-indent: -9999px;
+	line-height: 0px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+
+a:active {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+
+/* HTML5 Reset */
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {
+	display: block;
+}
+
+/* Accessibility Navigation */
+#accNav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 0;
+}
+
+#accNav a {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+	margin-left: -1px;
+	margin-bottom: -1px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.875em;
+	color: #000;
+	white-space: nowrap;
+}
+
+#accNav a:focus, #accNav a:hover, #accNav a:active {
+	width: 100%;
+	height: auto;
+	padding: 10px 0;
+	background: #000;
+	color: #fff;
+	z-index: 1000;
+}
