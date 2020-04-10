@@ -7,20 +7,22 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="stylesheet" href="/css/jquery-ui.css">
+<link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon" />
+
+<!-- <link rel="stylesheet" href="/css/jquery-ui.css"> -->
 <title>기업관리 | EPOPKON</title>
 <meta name="Description" content="Qool Solutions">
-<link rel="stylesheet" type="text/css" href="/css/common.css" />
+<!-- <link rel="stylesheet" type="text/css" href="/css/common.css" /> -->
 <!--[if lte IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!--[if lte IE 8]>
 	<link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen">
 <![endif]-->
-<script type="text/javascript" src="/js/jquery/jquery-1.11.0.min.js"></script>
+<!-- <script type="text/javascript" src="/js/jquery/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="/js/jquery/jquery-ui.js"></script>
 <script type="text/javascript" src="/js/common/ui.js"></script>
 <script type="text/javascript" src="/js/common/paging.js"></script>
 <script type="text/javascript" src="/js/common/common.js"></script>
+ -->
 <script type="text/javascript"> 
 
 var iCurrPage = "";

@@ -3,153 +3,268 @@
 
  footer{
     width: 100%;
-    height: 200px;
-     background: #1d262d; 
-     position: absolute;
+    height:200px;
+    background: #fff; 
+    border-top: 1px solid #ddd;
+    /* background: #1d262d;  */
+    
+}
+
+
+#footer_index {
+	width: 100%;
+	background: #1d262d;
+	position: absolute;
      bottom: 0;
 	 left: 0;
-} 
-footer .f_top{
+}
+ 
+.container {
+	width: 1280px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+/* footer {
     width: 100%;
+    font-family: 'NanumSquareRound';
+    font-weight: bold;
+    overflow: hidden;
+    transform-origin: top;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+} */
+footer .inner {
+	position: relative;
+}
+
+footer .logo {
+	
+	float: left;
+	color: #111;
+	text-align: center;
+	padding: 10px 40px;
+	background-image: url(../images/epopkon_logo_b.png);
+	background-size: contain;
+	background-repeat: no-repeat; 
+	width: 117px;
     height: 60px;
-}
-footer .f_top> ul.f_gnb{
-    width: 700px;
-    float: left;
-}
-footer .f_top ul.f_gnb>li{
-    width: 16%;
-    height: 50px;
-    float: left;
-    line-height: 50px;
-    box-sizing: border-box;
-    text-align: center;
-    margin-top: 20px;
-    
-    
-    
-}
-footer .f_top ul.f_gnb>li >a{
-    font-size: 16px;
-    color: #fff;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-footer .f_top ul.f_gnb>li:hover >a{
-    color: #4ec2cb;
+    text-indent: -9999px;
+    margin-top: 40px;
 }
 
-footer .f_top ul.sns{
-    width: 220px;
-    height: 80px;
-    float: right;
-    box-sizing: border-box;
-    padding: 32px 0;
-    
-}
-footer .f_top ul.sns li{
-    float: left;
-    width: 20%;
-    height: 37px;
-    box-sizing: border-box;
-    padding-left: 14px;
-    opacity: 0.6;
-}
-footer .f_top ul.sns li:hover{
-    opacity: 1;
-}
-footer .f_top ul.sns li a{
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-footer .f_top ul.sns li a img{
-    width: 30px;
-    height: 30px;
-    
+footer.on {
+	display: block;
+	animation: fAni linear 1.2s forwards;
 }
 
-footer .f_bottom{}
-footer .f_bottom .add{
-    width: 900px;
-    float: left;
-    font-size: 14px;
-}
-footer .f_bottom .add p{
-    
-    color: #fff;
-    font-weight: 300;
-    
-}
-footer .f_bottom .add p span{
-    color: #999;
-    
+@
+keyframes fAni { 0%{
+	opacity: 0;
 }
 
-footer .f_bottom .fam{
-    width: 200px;
-    height: 60px;
-    float: right;
+100%{
+opacity
+:
+ 
+1
 }
-footer .f_bottom .fam .ul{
-    
 }
-footer .f_bottom .fam .ul >.f1{
-    line-height: 40px;
-    width: 200px;
+footer .f_bottom {
+	width: 100%;
+	background: #1d262d;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+footer .con {
+	width: 60%;
+	float: left;
+	color: #595959;
+	font-size: 12px;
+	letter-spacing: -0.5px;
+	font-weight: bold;
+	line-height: 1.6;
+	display: block;
+	border-top: 1px dolid #ccc;
+}
+
+footer .con p {
+	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+footer .con ul {
+	width: 100%;
+	display: block;
+}
+
+footer .con ul li {
+	display: inline-block;
+}
+
+footer .con ul li:last-child {
+	color: #999;
+	margin-top: 10px;
+}
+
+footer .con ul li.gray {
+	color: #999;
+}
+
+footer .con ul li.ml {
+	margin-left: 10px;
+}
+
+footer .con ul em {
+	color: #999;
+	display: block;
+	padding-top: 10px;
+	margin-bottom: 20px;
+}
+
+footer .contect_us {
+	width: 20%;
+	float: right;
+	color: #333;
+	padding-top: 30px;
+	display: block;
+}
+
+footer .contect_us .connect_t {
+	width: 100%;
+	display: block;
+}
+
+footer .contect_us span {
+	font-size: 12px;
+}
+
+footer .contect_us p {
+	font-size: 26px;
+}
+
+footer .contect_us p b {
+	
+}
+
+footer .contect_us i {
+	font-size: 14px;
+	color: #999;
+}
+
+/* footer .contect_us .fam{
+	width: 200px;
     height: 40px;
-    border: 1px solid #fff;
-    box-sizing: border-box;
-    line-height: 40px;
+	float: left;
+	background: #111;
+}
+ */
+/* 패밀리사이트 ----------------*/
+footer .fam {
+	width: 20%;
+	float: left;
+	display: block;
 }
 
-footer .f_bottom .fam> .ul>.f1 >a{
-    width: 100%;
-    height: 40px;
-    color: #fff;
-    padding-left: 20px;
-    font-size: 16px;
-    display: block;
-    box-sizing: border-box;
-    font-weight: 300;
+ul.buy_info {
+	/* position: relative; */
+	margin-bottom: 20px;
+	width: 150px;
+	height: 30px;
+	color: #595959;
+	z-index: 10;
+	box-sizing: border-box;
+	border: 1px solid #595959;
+	/*  margin-top: 30px; */
 }
-footer .f_bottom .fam> .ul>.f1 >a >span{
-    font-size: 20px;
-    float: right;
-    padding-right: 20px;
-    box-sizing: border-box;
+
+ul.buy_info>li {
+	
+	width: 150px;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	/* padding-left: 30px; */
+	/* width: 150px;
+    height: 40px; */
+	line-height: 30px;
+	text-align: center;
+	border-radius: 0 0 0 0;
+	transition: all 0.3s;
 }
-footer .f_bottom .fam >.ul >a >span >i{}
+
+ul.buy_info.on>li {
+	background-color: #fff;
+	color: #595959;
+	box-sizing: border-box;
+}
+
+ul.buy_info:hover>li {
+	transform: scale(1.0);
+}
+
+ul.buy_info>li>a {
+	width: 150px;
+	height: 30px;
+	display: block;
+}
+
+ul.buy_info>li>a>i {
+	font-size: 20px;
+	color: #595959;
+	box-sizing: border-box;
+	float: right;
+	padding-right: 20px;
+	line-height: 30px;
+}
+ul.buy_info.on>li>a>i{
+	
+}
+/* ul.buy_info.active>li>a>i {
+	font-size: 20px;
+	color: #fff;
+	box-sizing: border-box;
+	float: right;
+	padding-right: 20px;
+} */
 
 
-footer .f_bottom .fam .ul>a{
-    width: 100%;
-    height: 28px;
-    border: 1px solid #fff;
-    border-top: 0;
-    display: none;
-    font-size: 12px;
-    color: #ccc;
-    text-align: left;
-    box-sizing: border-box;
-    padding-left: 20px;
-    line-height: 28px;
-    background: #13181c;
+
+ul.buy_info>li>ul.buy_sub {
+	width: 150px;
+	box-sizing: border-box;
+	background-color: #eee;
+	border: 1px solid #595959;
+	display: none;
 }
-/*footer .f_bottom .fam .ul> .sub_fam a{
-    width: 100%;
-    height: 100%;
-    display: block;
-    font-size: 12px;
-    color: #ccc;
-    text-align: left;
-    box-sizing: border-box;
-    padding-left: 20px;
-    line-height: 28px;
-    background: #13181c;
-}*/
-footer .f_bottom .fam .ul>li:hover>a{
-    color: #fff;
-    background: #1d262d;
+
+ul.buy_info>li>ul.buy_sub>li {
+	width: 150px;
+	height: 30px;
+	box-sizing: border-box;
+
 }
+
+ul.buy_info>li>ul.buy_sub>li>a {
+	width: 100%;
+	height: 30px;
+	display: block;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+ul.buy_info>li>ul.buy_sub>li:hover>a {
+	background: #ccc;
+	width: 150px;
+	height: 30px;
+	box-sizing: border-box;
+	/* border-radius: 5px; */
+	color: #000;
+	font-weight: bold;
+}
+
+/* 패밀리사이트 -------- 끝 --------*/

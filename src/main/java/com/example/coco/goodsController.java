@@ -50,7 +50,18 @@ public class goodsController {
 //		model.addAttribute("category", JSONArray.fromObject(categoryDTO));
 
 	}
+	
+	
+//	 발송 관리 ===========================
+			@RequestMapping(value = "/user/user_main", method = RequestMethod.GET)
+			public void userMain(Model model) throws Exception {
+				logger.info("======= get user_main  =======");
 
+//				List<categoryDTO> categoryDTO = null;
+//				categoryDTO = aService.category();
+//				model.addAttribute("category", JSONArray.fromObject(categoryDTO));
+
+			}
 
 
 	
