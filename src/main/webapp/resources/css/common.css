@@ -8,7 +8,7 @@
 /* 수정 =-----------*/
 
 #wrap {
-	min-width: 900px;
+	min-width: 1620px;
 	min-height: 100%;
 	position: relative;
 	background: #fff; 
@@ -16,10 +16,11 @@
 
 #header {
 	background: #fff;
-	border-bottom: 1px solid #ddd;
+	/* border-bottom: 1px solid #ddd; */
 }
 
 #header h1 {
+	position: relative;
 	background-image: url(../images/epopkon_logo.png);
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -55,7 +56,7 @@
 #gnb {
 	/* background: #00ace6; */
 	background: #b3e7ff;
-	border-bottom: #52527a 1px solid;
+	/* border-top: #52527a 1px solid; */
 }
 /*------------------*/
 
@@ -65,12 +66,13 @@
 
 #gnb li {
 	float: left;
-	padding: 10px 0;
+	padding: 6px 0;
 }
 
 #gnb li a {
 	display: block;
 	padding: 5px 10px 7px;
+	font-size: 14px;
 }
 
 #gnb li a.on {
@@ -82,7 +84,7 @@
 /* 수정---------------- */
 #container {
 	padding-bottom: 150px;
-	width: 1280px;
+	width: 1620px;
 	margin: 0 auto;
 }
 
@@ -93,7 +95,10 @@
 }
 
 #nav li {
-	padding: 5px 30px;
+	padding: 5px 20px;
+	font-size: 18px;
+	color: #52527a;
+	font-weight: bold;
 }
 
 #nav li a.on {
@@ -528,7 +533,7 @@ button.btnType06, a.btnType06 {
 	left: 50%;
 	top:50%;
 	margin-left:-300px;
-	margin-top: -200px;
+	margin-top: -150px;
 	width: 600px;
 	box-sizing: border-box;
 	padding: 50px 0;
@@ -584,12 +589,21 @@ button.btnType06, a.btnType06 {
 	margin-left: 3px;
 }
 
+
+/* 수정 -------------*/
+
 .findInfo {
 	text-align: center;
-	border-top: 1px solid #f0f0f0;
-	margin: 20px 40px 0;
-	padding-top: 20px;
+/*	border-top: 1px solid #f0f0f0;
+ 	margin: 20px 40px 0;
+	padding-top: 20px; */
+	font-size: 16px;
+	margin-top: 30px;
+	float: right;
 }
+
+/* -------------*/
+
 
 .findInfo a {
 	display: inline-block;

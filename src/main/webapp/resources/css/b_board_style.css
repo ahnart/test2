@@ -15,23 +15,43 @@
 
 /* Login ----------*/
 section p.loginon {
-	text-align: center;
-	margin-bottom: 10px;
+	margin-top: 30px;
 	font-size: 16px;
+	float: right;
 }
 section p.loginon span{
 	color: #66d9ff;
 	font-size: 22px;
 }
+
+section p.loginon a{
+	color: #111;
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+section p.loginon a button{
+	width: 120px;
+	height: 30px;
+	border: 1px solid #ccc;
+	color: #ccc;
+	line-height: 30px;
+}
+
+section p.loginon a button:hover{
+	border: 1px solid #ddd;
+	background: #66d9ff;
+	color: #fff;
+	
+}
+
+
 .log_in {
 	width: 80%;
 	margin: 0 auto;
 }
 
- a.index_btn{
-	width: 120px;
-	height: 40px;
-}
+
 
 .log_in a button {
 	width: 100%;
@@ -53,8 +73,18 @@ section p.loginon span{
 }
 
 
-
-
+/* 로고타이틀 --------------*/
+.epop_logo{
+	
+	background-position: center;
+	background-image: url(../images/epop_logo_title.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 254px;
+    height: 130px;
+    text-indent: -9999px;
+    margin-left: 50%;
+    transform: translate(-50%, 70%);
 
 
 

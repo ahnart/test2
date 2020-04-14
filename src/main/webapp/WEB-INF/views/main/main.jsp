@@ -140,7 +140,7 @@ $(document).ready(function() {
 		
 		<li><a href="/buy/buyList.do" class="buyMng">구매관리</a></li>
 		
-		<li><a href="/system/userList.do" class="systemMng">시스템관리</a></li>
+		<li><a href="/main/user_list" class="systemMng">시스템관리</a></li>
 	</ul>
 </section>
 

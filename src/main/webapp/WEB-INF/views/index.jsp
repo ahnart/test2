@@ -68,6 +68,7 @@
 
 		<!-- header end -->
 		<div class="content_bg">
+		<div class="epop_logo">EPOP</div>
 		<section class="login">
 
 			<c:if test="${member == null}">
@@ -96,9 +97,7 @@
 
 			<c:if test="${member != null}">
 				
-				<p class="loginon" >
-					<span class="user_name">${member.u_id}</span> 님환영합니다!
-				</p>
+				
 				<div class="log_in">
 				<a href="/signup" class="index_btn"><button class="">회원가입 하기</button></a>
 				<a href="/user/user_main" class="index_btn"><button class=" ">발송관리</button></a>

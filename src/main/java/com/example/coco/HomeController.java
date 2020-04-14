@@ -124,5 +124,18 @@ public class HomeController {
 		return "redirect:/user/admin";
 	}
 
-
+//	계정 등록 ===========================
+			@RequestMapping(value = "/company/userForm", method = RequestMethod.GET)
+			public void userForm(Model model) throws Exception {
+				logger.info("======= get user Form  =======");					
+	}	
+			
+//	기업 등록 ===========================
+			@RequestMapping(value = "/company/companyForm", method = RequestMethod.GET)
+			public void companyForm(Model model) throws Exception {
+				logger.info("======= get company Form  =======");					
+			}	
+			
+			
+			
 }

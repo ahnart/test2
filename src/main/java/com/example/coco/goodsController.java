@@ -63,8 +63,34 @@ public class goodsController {
 
 			}
 
-
-	
+//	구매 관리 ===========================
+			@RequestMapping(value = "/user/buy_list", method = RequestMethod.GET)
+			public void buyList(Model model) throws Exception {
+				logger.info("======= get buy_list  =======");
+					
+			}
+			
+//	시스템 관리 ===========================
+			@RequestMapping(value = "/user/user_list", method = RequestMethod.GET)
+			public void userList(Model model) throws Exception {
+				logger.info("======= get user_list  =======");
+			
+	}
+			
+//	기업 목록 ===========================
+			@RequestMapping(value = "/company/companyDetail", method = RequestMethod.GET)
+			public void companyDetail(Model model) throws Exception {
+				logger.info("======= get company Detail  =======");
+					
+			}
+			
+//	계정 관리 ===========================
+			@RequestMapping(value = "/company/userDetail", method = RequestMethod.GET)
+			public void userDetail(Model model) throws Exception {
+				logger.info("======= get user Detail  =======");
+							
+			}					
+					
 	// 상품 등록 이미지 추가 ===============
 	@RequestMapping(value = "/user/register", method = RequestMethod.POST)
 	public String register(goodsDTO goodsDTO, MultipartFile file) throws Exception {

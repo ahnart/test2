@@ -20,7 +20,7 @@
 }
  
 .container {
-	width: 1280px;
+	width: 1620px;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -112,6 +112,11 @@ footer .con ul li:last-child {
 
 footer .con ul li.gray {
 	color: #999;
+}
+footer .con em.gray {
+	color: #999;
+	font-size: 16px;
+	margin-left: 4px;
 }
 
 footer .con ul li.ml {

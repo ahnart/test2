@@ -26,7 +26,7 @@
 				<h1>Epopkon</h1>
 			</div>
 			<div class="con">
-				<p>이팝콘 Epopkon</p>
+				<p>이팝콘 <em class="gray"> Enjoy Coupons as Popcorn</em></p>
 				<ul class="clearfix">
 					<li class="gray">회사명 :</li>
 					<li>(주)모바일이앤엠애드</li>
