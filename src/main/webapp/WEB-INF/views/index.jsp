@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!doctype html>
@@ -17,8 +16,6 @@
 <link rel="stylesheet" type="text/css" href="resources/css/b_board_style.css"> 
 <!-- 
 <link rel="stylesheet" type="text/css" href="resources/css/main_style.css"> -->
-
-
 
 <!--[if lte IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!--[if lte IE 8]>
@@ -101,7 +98,7 @@
 			<c:if test="${member != null}">
 				<div class="log_in">
 				<a href="/signup" class="index_btn"><button class="">회원가입</button></a>
-				<a href="/user/user_main" class="index_btn"><button class=" ">EPOPKON</button></a>
+				<a href="/user/user_main" class="index_btn"><button class=" "><em>e</em> POPKON</button></a>
 				<c:if test="${member.level == 9}">
 					<a href="/user/admin" class="index_btn"><button class=" ">관리자 페이지</button></a>
 					<!-- <a href="/user/register" class="index_btn"><button class=" ">상품등록</button></a> -->

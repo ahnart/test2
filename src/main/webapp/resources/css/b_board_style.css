@@ -162,7 +162,14 @@ section p.loginon a button:hover{
 	
 }
 
+.log_in a button em{
+	color: #4dd2ff;
+}
 
+.log_in a button:hover em{
+	color: #fff;
+	font-weight: bold;
+}
  .g_thum{
  width: 100px;
  }
