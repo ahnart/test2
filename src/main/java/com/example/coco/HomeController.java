@@ -129,13 +129,40 @@ public class HomeController {
 			public void userForm(Model model) throws Exception {
 				logger.info("======= get user Form  =======");					
 	}	
-			
+	
 //	기업 등록 ===========================
 			@RequestMapping(value = "/company/companyForm", method = RequestMethod.GET)
 			public void companyForm(Model model) throws Exception {
 				logger.info("======= get company Form  =======");					
-			}	
+	}
+	
+//	기업 등록 ===========================
+			@RequestMapping(value = "/company/companyCommisionList", method = RequestMethod.GET)
+			public void companyCommisionList(Model model) throws Exception {
+				logger.info("======= get company CommisionList =======");	
+	}			
+
+//	금액 정보 ===========================
+			@RequestMapping(value = "/company/companyPointList", method = RequestMethod.GET)
+			public void companyPointList(Model model) throws Exception {
+				logger.info("======= get company PointList =======");	
+	}		
 			
-			
-			
+//	search Media List  ===========================
+			@RequestMapping(value = "/company/searchMediaList", method = RequestMethod.GET)
+			public void searchMediaList(Model model) throws Exception {
+				logger.info("======= get company search Media List =======");	
+	}
+	
+//	buy Detail  ===========================
+			@RequestMapping(value = "/buy/buyDetail", method = RequestMethod.GET)
+			public void buyDetail(Model model) throws Exception {
+				logger.info("======= get buy buy Detail =======");	
+			}			
+					
+					
+					
+					
+					
+					
 }

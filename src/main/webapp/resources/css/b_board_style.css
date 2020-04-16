@@ -8,7 +8,92 @@
 	background-image: url(../images/hero-bg.jpg);
 	background-size: inherit;
 	background-repeat: no-repeat;
+	overflow: hidden;
+	position: relative;
 }
+
+/* 로고타이틀 --------------*/
+.epop_logo{
+	
+	background-position: center;
+	background-image: url(../images/epop_logo_title.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 254px;
+    height: 130px;
+    text-indent: -9999px;
+    margin-left: 50%;
+    transform: translate(-50%, 50%);
+    animation: titAni1 1s forwards;
+}
+
+/* 인트로 애니메이션 -----------*/
+.content_bg .main_chr01 {
+	background-image: url(../images/epop_chr01.png);  
+    width: 217px;
+    height: 270px;
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translate(200px,-400px); 
+    color: #fff;
+    animation: titAni 1s forwards;
+    opacity: 0;
+    text-indent: -9999px;
+    animation-delay: 0.5s
+}
+.content_bg .main_chr02{
+    background-image: url(../images/IMG_0453.GIF);
+    width: 360px;
+    height: 360px;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translate(200px, -100px);
+    color: #fff;
+    animation: titAni2 0.5s forwards;
+    opacity: 0;
+    text-indent: -9999px;
+    animation-delay: 0.8s
+}
+@keyframes titAni{
+    0%{
+        transform: translate(-400px,200px);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: translate(-550px);
+        opacity: 1;
+    }
+}
+@keyframes titAni1{
+    0%{
+        transform: translate(-120px, 200px);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: translate(-120px, 80px);
+        opacity: 1;
+    }
+}
+
+@keyframes titAni2{
+    0%{
+        transform: translate(250px,100px);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: translate(250px, -30px);
+        opacity:1;
+    }
+}
+
+
+
+
 
 
 
@@ -73,22 +158,9 @@ section p.loginon a button:hover{
 }
 
 
-/* 로고타이틀 --------------*/
-.epop_logo{
-	
-	background-position: center;
-	background-image: url(../images/epop_logo_title.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 254px;
-    height: 130px;
-    text-indent: -9999px;
-    margin-left: 50%;
-    transform: translate(-50%, 70%);
-
-
-
-
+ .g_thum{
+ width: 100px;
+ }
 
 
 

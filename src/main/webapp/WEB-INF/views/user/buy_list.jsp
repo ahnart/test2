@@ -6,23 +6,31 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/resources/images/favicon.ico">
+
 <link rel="stylesheet" href="/css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
 
 <title>구매관리 | POPKON</title>
 <meta name="Description" content="Qool Solutions">
-<link rel="stylesheet" type="text/css" href="/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
 <!--[if lte IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!--[if lte IE 8]>
 	<link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen">
 <![endif]-->
-<script type="text/javascript" src="/js/jquery/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/js/jquery/jquery-ui.js"></script>
-<script type="text/javascript" src="/js/common/ui.js"></script>
-<script type="text/javascript" src="/js/common/paging.js"></script>
-<script type="text/javascript" src="/js/common/common.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/resources/js/ui.js"></script>
+<script type="text/javascript" src="/resources/js/paging.js"></script>
+<script type="text/javascript" src="/resources/js/commmon.js"></script>
+<script>
+        function popup(){
+            var url = "/company/searchMediaList";
+            var name = "popup test";
+            var option = "width = 500, height = 500, top = 100, left = 200, location = no"
+            window.open(url, name, option);
+        }
+</script>
 <script type="text/javascript">
 	var iCurrPage = "";
 	var iTotalCount = "";
@@ -63,7 +71,15 @@
 					$("#search_keyword").val("");
 				});
 				// search selectbox change event end
-
+				
+				// 팝업창
+				$(".btnBase").click(function() {
+					$("#popup").fadeIn();
+				})
+				$(".button").click(function() {
+					$("#popup").fadeOut();
+				})
+				
 			});
 
 	function goPageNo(pageNo) {
@@ -81,21 +97,25 @@
 				+ '&send_mass_id=' + sendMassId + '&pay_id=' + payId
 				+ '&pin_no=' + pinNo + '&listpage=' + iCurrPage);
 	}
+
+	
+	
 </script>
 </head>
 
 <body>
+	
 	<div id="wrap">
 
 		<!-- Header start -->
 
-		<script type="text/javascript" src="/js/jquery/jquery.i18n.properties-1.0.9-min.js"></script>
-		<script type="text/javascript" src="/js/jquery/jquery-ui.js"></script>
+		<script type="text/javascript" src="/resources/js/jquery.i18n.properties-1.0.9-min.js"></script>
+		<script type="text/javascript" src="/resources/js/jquery-ui.js"></script>
 
 		<script type="text/javascript">
 			
 		</script>
-		<script type="text/javascript" src="/js/jquery/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/resources/js/jquery.cookie.js"></script>
 		<script type="text/javascript">
 			// menu setting
 			var gnbType = 'buyMng';
@@ -111,9 +131,9 @@
 				// gnb setting end
 			});
 		</script>
+		
 		<header id="header" class="clearfix">
 			<%@ include file="../include/header.jsp"%>
-
 		</header>
 
 		<section id="gnb">
@@ -150,30 +170,33 @@
 				</div>
 				<!-- gnb end -->
 				<form name="frm" id="frm" method="post">
-					<input type="hidden" id="page"		 		name="page" value="" /> 
-					<input type="hidden" id="pagecount"			name="pagecount" value="" /> 
-					<input type="hidden" id="pagetotal" 		name="pagetotal" value="15" /> 
-					<input type="hidden" id="send_mass_id" 		name="send_mass_id" value="" /> 
-					<input type="hidden" id="goods_com_id"	 	name="goods_com_id" value="" />
+					<input type="hidden" id="page" name="page" value="" /> 
+					<input type="hidden" id="pagecount" name="pagecount" value="" /> 
+					<input type="hidden" id="pagetotal" name="pagetotal" value="15" /> 
+					<input type="hidden" id="send_mass_id" name="send_mass_id" value="" /> 
+					<input type="hidden" id="goods_com_id" name="goods_com_id" value="" />
 
 					<div class="search clearfix">
 						<div class="half-col">
 							<div class="row">
 								<strong>구매날짜</strong>
 								<div class="calendar">
-									<input type="text" name="start_date" id="start_date" value="2020-04-13" class="datepicker01">
-									<img class="ui-datepicker-trigger" src="/resources/images/btn_cal.png" alt="Select date" title="Select date">
+									<input type="text" name="start_date" id="start_date" value="2020-04-13" class="datepicker01"> <img class="ui-datepicker-trigger" src="/resources/images/btn_cal.png" alt="Select date"
+										title="Select date">
 								</div>
 								<span> ~ </span>
 								<div class="calendar">
-									<input type="text" name="end_date" id="end_date" value="2020-04-13" class="datepicker02">
-									<img class="ui-datepicker-trigger" src="/resources/images/btn_cal.png" alt="Select date" title="Select date">
-									
+									<input type="text" name="end_date" id="end_date" value="2020-04-13" class="datepicker02"> <img class="ui-datepicker-trigger" src="/resources/images/btn_cal.png" alt="Select date"
+										title="Select date">
 								</div>
 							</div>
 							<div class="row">
-								<strong>매체사</strong> <input type="text" id="send_mass_name" name="send_mass_name" value="" readonly="readonly" /> <span class="flowType"><a class="btnBase"
-									onclick="javascript:findName('/company/searchMediaList.do', 'media');">찾기</a></span>
+								<strong>매체사</strong> 
+								<input type="text" id="send_mass_name" name="send_mass_name" value="" readonly="readonly" /> 
+								<span class="flowType"> 
+									<a class="btnBase" style="cursor: pointer;" onclick="javascript:findName('/company/searchMediaList.do', 'media');">찾기</a>
+									
+								</span>
 							</div>
 							<div class="row">
 								<strong>구매자</strong> <input type="text" placeholder="(번호/이메일)" name="b2c_buy_user_phone_no" id="b2c_buy_user_phone_no" value="" />
@@ -199,7 +222,7 @@
 							</div>
 							<div class="row">
 								<strong>상품공급사명</strong> <input type="text" id="goods_com_name" name="goods_com_name" value="" readonly="readonly" /> <span class="flowType"><a class="btnBase"
-									onclick="javascript:findName('/company/searchGoodsComList.do', 'goodscom');">찾기</a></span>
+									style="cursor: pointer;" onclick="javascript:findName('/company/searchMediaList.do', 'goodscom');">찾기</a></span>
 							</div>
 							<div class="row">
 								<strong>수신자</strong> <input type="text" placeholder="(번호/이메일)" name="res_cust_phone_no" id="res_cust_phone_no" value="" />
@@ -246,7 +269,7 @@
 						</span>
 						<div class="comp scrollTb xScroll">
 							<table class="tbType01">
-							<!-- 	<caption>구매목록</caption> -->
+								<!-- 	<caption>구매목록</caption> -->
 								<thead>
 									<tr>
 										<th>구매번호</th>
@@ -269,7 +292,7 @@
 
 
 
-									<tr style="cursor: pointer;" onclick="javascript:goDetail('02004131242042231004', 'comang', '', '911618161734');">
+									<tr style="cursor: pointer;"  onclick="location.href='/buy/buyDetail'">
 										<td class="alignC">C0041312420363010013</td>
 										<td class="alignC"></td>
 										<td class="alignC">꼬망세</td>
@@ -428,7 +451,7 @@
 
 				<div class="sortArea">
 					<div class="paging mt20" id="paging">
-					<span class="paginator"><a class="on" href="javascript:goPageNo(1)" title="1" alt="1">1</a></span>
+						<span class="paginator"><a class="on" href="javascript:goPageNo(1)" title="1" alt="1">1</a></span>
 					</div>
 				</div>
 			</section>

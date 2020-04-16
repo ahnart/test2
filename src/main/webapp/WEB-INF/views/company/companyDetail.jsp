@@ -6,22 +6,22 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="stylesheet" href="/css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css" />
+<link rel="shortcut icon" href="/resources/images/favicon.ico">
 
-<title>기업관리상세 | SISCUS</title>
+<link rel="stylesheet" href="/css/jquery-ui.css">
+<title>기업관리상세 | EPOPKON</title>
 <meta name="Description" content="Qool Solutions">
-<link rel="stylesheet" type="text/css" href="/css/common.css" />
+<link rel="stylesheet" type="text/css" href="/resources/css/common.css" />
 <!--[if lte IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <!--[if lte IE 8]>
 	<link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen">
 <![endif]-->
-<script type="text/javascript" src="/js/jquery/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/js/jquery/jquery-ui.js"></script>
-<script type="text/javascript" src="/js/common/ui.js"></script>
-<script type="text/javascript" src="/js/common/paging.js"></script>
-<script type="text/javascript" src="/js/common/common.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/resources/js/ui.js"></script>
+<script type="text/javascript" src="/resources/js/paging.js"></script>
+<script type="text/javascript" src="/resources/js/common.js"></script>
+<script type="text/javascript" src="/resources/js/custom.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		// left menu setting start
@@ -148,13 +148,9 @@
 
 <body>
 	<div id="wrap">
-
 		<!-- Header start -->
-
-
 		<script type="text/javascript" src="/js/jquery/jquery.i18n.properties-1.0.9-min.js"></script>
 		<script type="text/javascript" src="/js/jquery/jquery-ui.js"></script>
-
 		<script type="text/javascript">
 			
 		</script>
@@ -176,7 +172,6 @@
 		</script>
 		<header id="header" class="clearfix">
 			<%@ include file="../include/header.jsp"%>
-
 		</header>
 
 		<section id="gnb">
@@ -192,19 +187,14 @@
 		</section>
 
 		<!-- Header end -->
-
 		<section id="container" class="clearfix">
 			<!-- LNB start -->
-
-
-
 			<nav id="nav">
 				<ul>
-					<li><a href="/company/companyList.do" class="companyList">기업관리</a></li>
+					<li><a href="/user/user_main" class="companyList">기업관리</a></li>
 				</ul>
 			</nav>
 			<!-- LNB end -->
-
 			<section id="section">
 				<!-- gnb start -->
 				<div class="bradcrumb">
@@ -215,16 +205,13 @@
 					<input type="hidden" id="user_id" name="user_id" value="comang" /> <input type="hidden" id="user_gubun" name="user_gubun" value="M002" /> <input type="hidden" id="ip_gubun" name="ip_gubun"
 						value="1" /> <input type="hidden" id="limit_flag" name="limit_flag" value="Y" />
 
-
 					<!-- tab start -->
-
-
 
 					<div class="tabType01">
 						<ul class="clearfix">
-							<li id="companyBasic"><a onclick="javascript:commonGetUrl('/company/companyDetail.do', 'user_id=comang');">기본정보</a></li>
-							<li id="companyPoint"><a onclick="javascript:commonGetUrl('/company/companyPointList.do', 'user_id=comang');">금액정보</a></li>
-							<li id="companyCommission"><a onclick="javascript:commonGetUrl('/company/companyCommissionList.do', 'user_id=comang&user_gubun=M002');">수수료정보</a></li>
+							<li id="companyBasic" class="on"><a href="/company/companyDetail">기본정보</a></li>
+							<li id="companyPoint" class=" "><a href="/company/companyPointList">금액정보</a></li>
+							<li id="companyCommission" class=" "><a href="/company/companyCommisionList">수수료정보</a></li>
 							<!--<li id="companyDeco"><a onclick="javascript:commonGetUrl('/company/companyDecoList.do', 'user_id=comang');" >꾸미기정보</a></li>-->
 						</ul>
 					</div>
@@ -235,7 +222,7 @@
 						<h2>기본정보</h2>
 						<div class="comp">
 							<table class="tbType02">
-								<caption>기본정보</caption>
+								<!-- 	<caption>기본정보</caption> -->
 								<colgroup>
 									<col style="width: 15%;">
 									<col style="width: 35%">
@@ -370,10 +357,10 @@
 						<h2>담당자정보</h2>
 						<div class="comp">
 							<table class="tbType02">
-								<caption>
+								<!-- 	<caption>
 									담당자정보
 									</h2>
-								</caption>
+								</caption> -->
 								<colgroup>
 									<col style="width: 15%;">
 									<col style="width: 35%;">
@@ -398,20 +385,11 @@
 										<td colspan="3"><input type="text" name="cust_user_email" id="cust_user_email" placeholder="이메일" value="3246319@daum.net" /></td>
 										<!-- th>ë§¤ì¶ë´ë¹</th>
 								<td>
-									
-									
-									
 									<select name="sales_id" id="sales_id">
-										
 										<option value="couponadmin"  >관리자</option>
-										
 										<option value="test"  >테스트</option>
-										
 										<option value="baemin"  >배달의민족</option>
-										
 									</select>
-									
-									
 								</td-->
 									</tr>
 									<tr>
@@ -432,8 +410,6 @@
 		</section>
 
 		<!-- Header start -->
-
-
 
 		<script type="text/javascript">
 			var openPop;

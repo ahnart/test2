@@ -65,12 +65,15 @@
 			</div>
 			 -->
 		</header>
-
+		
 		<!-- header end -->
 		<div class="content_bg">
-		<div class="epop_logo">EPOP</div>
+			<div class="epop_logo">EPOP</div>
+			<div class="main_chr01 active">보라</div>
+			<div class="main_chr02 active">깨동이</div>
+		</div><!-- content_bg -->
 		<section class="login">
-
+			
 			<c:if test="${member == null}">
 				<form id="loginForm" name="loginForm" role="form" autocomplete="off" method="post" action="signin">
 					<div>
@@ -111,7 +114,7 @@
 			</c:if>
 
 		</section>
-		</div><!-- content_bg -->
+		
 		<!-- footer start -->
 
 		

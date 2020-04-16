@@ -6,7 +6,8 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="/resources/images/favicon.ico">
+
 <link rel="stylesheet" href="/css/jquery-ui.css">
 <title>기업 등록 화면 | EPOPKON</title>
 <meta name="Description" content="Qool Solutions">

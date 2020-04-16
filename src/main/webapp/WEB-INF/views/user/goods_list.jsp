@@ -13,9 +13,7 @@ a.thum_img img {
 }
 </style>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/b_board_style.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/main_style.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/footer.css">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/reset.css">
 
 </head>
@@ -23,7 +21,7 @@ a.thum_img img {
 	<header id="header" class="clearfix">
 		<%@ include file="../include/header.jsp"%>
 	</header>
-	<div class="ui middle aligned center aligned grid">
+	<div id="container"">
 		<div class="column">
 			<div class="column">
 				<div class="ui large form">
@@ -118,7 +116,6 @@ a.thum_img img {
 	</div>
 	<footer>
 		<%@ include file="../include/footer.jsp"%>
-
 	</footer>
 
 </body>
