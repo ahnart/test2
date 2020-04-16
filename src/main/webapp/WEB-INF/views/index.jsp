@@ -99,10 +99,8 @@
 			</c:if>
 
 			<c:if test="${member != null}">
-				
-				
 				<div class="log_in">
-				<a href="/signup" class="index_btn"><button class="">회원가입 하기</button></a>
+				<a href="/signup" class="index_btn"><button class="">회원가입</button></a>
 				<a href="/user/user_main" class="index_btn"><button class=" ">발송관리</button></a>
 				<c:if test="${member.level == 9}">
 					<a href="/user/admin" class="index_btn"><button class=" ">관리자 페이지</button></a>

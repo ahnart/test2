@@ -121,10 +121,11 @@ section p.loginon a button{
 	border: 1px solid #ccc;
 	color: #ccc;
 	line-height: 30px;
+	transition: all 0.3s;
 }
 
 section p.loginon a button:hover{
-	border: 1px solid #ddd;
+	border: 1px solid #66d9ff;
 	background: #66d9ff;
 	color: #fff;
 	
@@ -151,10 +152,13 @@ section p.loginon a button:hover{
 	margin-top: 5px;
 	display: block;
 	background: #fff;
+	transition: all 0.3s;
 }
 .log_in a button:hover {
+	border: 1px solid #4dd2ff;
 	background: #4dd2ff;
-	color: #ffff80;
+	color: #fff;
+	
 }
 
 
