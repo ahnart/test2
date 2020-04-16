@@ -7,7 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="shortcut icon" href="/resources/images/favicon.ico">
-
 <link rel="stylesheet" href="/css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css" />
 
@@ -140,9 +139,7 @@
 			<div class="container">
 				<ul class="clearfix">
 					<li><a href="/user/user_main" class="companyMng">기업관리</a></li>
-
 					<li><a href="/user/buy_list" class="buyMng">구매관리</a></li>
-
 					<li><a href="/user/user_list" class="systemMng">시스템관리</a></li>
 				</ul>
 			</div>
@@ -152,13 +149,9 @@
 
 		<section id="container" class="clearfix">
 			<!-- LNB start -->
-
-
-
 			<nav id="nav">
 				<ul>
 					<li><a href="/buy/buyList.do" class="buyList">구매조회</a></li>
-
 				</ul>
 			</nav>
 			<!-- LNB end -->
@@ -286,12 +279,6 @@
 								</thead>
 								<tbody>
 
-
-
-
-
-
-
 									<tr style="cursor: pointer;"  onclick="location.href='/buy/buyDetail'">
 										<td class="alignC">C0041312420363010013</td>
 										<td class="alignC"></td>
@@ -303,9 +290,6 @@
 										<td class="alignC">발행</td>
 										<td class="alignC">com_00000000000024</td>
 									</tr>
-
-
-
 
 									<tr style="cursor: pointer;" onclick="javascript:goDetail('02004131237274651003', 'comang', '', '911642442750');">
 										<td class="alignC">C0041312372623410012</td>
@@ -319,9 +303,6 @@
 										<td class="alignC">com_00000000000023</td>
 									</tr>
 
-
-
-
 									<tr style="cursor: pointer;" onclick="javascript:goDetail('02004130234519851002', 'comang', '', '911597259935');">
 										<td class="alignC">C0041302345058410011</td>
 										<td class="alignC"></td>
@@ -333,9 +314,6 @@
 										<td class="alignC">발행</td>
 										<td class="alignC">com_00000000000021</td>
 									</tr>
-
-
-
 
 									<tr style="cursor: pointer;" onclick="javascript:goDetail('02004130200346751002', 'comang', '', '911285722166');">
 										<td class="alignC">C0041302003376410010</td>
@@ -349,9 +327,6 @@
 										<td class="alignC">com_00000000000019</td>
 									</tr>
 
-
-
-
 									<tr style="cursor: pointer;" onclick="javascript:goDetail('02004130154118921002', 'comang', '', '911673434330');">
 										<td class="alignC">C0041301541100410009</td>
 										<td class="alignC"></td>
@@ -363,9 +338,6 @@
 										<td class="alignC">발행</td>
 										<td class="alignC">com_00000000000018</td>
 									</tr>
-
-
-
 
 									<tr style="cursor: pointer;" onclick="javascript:goDetail('20200413014037117177', 'comang', '', '911847489812');">
 										<td class="alignC">C0041301403694810008</td>
@@ -379,9 +351,6 @@
 										<td class="alignC">com_00000000000015</td>
 									</tr>
 
-
-
-
 									<tr style="cursor: pointer;" onclick="javascript:goDetail('20200413013551068176', 'comang', '', '911431812258');">
 										<td class="alignC">C0041301355092610007</td>
 										<td class="alignC"></td>
@@ -393,9 +362,6 @@
 										<td class="alignC">발행</td>
 										<td class="alignC">com_00000000000011</td>
 									</tr>
-
-
-
 
 									<tr style="cursor: pointer;" onclick="javascript:goDetail('20200413013403059175', 'comang', '', '911571938752');">
 										<td class="alignC">C0041301340301310006</td>
@@ -409,9 +375,6 @@
 										<td class="alignC">com_00000000000010</td>
 									</tr>
 
-
-
-
 									<tr style="cursor: pointer;" onclick="javascript:goDetail('20200413011319442174', 'comang', '', '911390175437');">
 										<td class="alignC">C0041301131930610005</td>
 										<td class="alignC"></td>
@@ -424,9 +387,6 @@
 										<td class="alignC">com_00000000000009</td>
 									</tr>
 
-
-
-
 									<tr style="cursor: pointer;" onclick="javascript:goDetail('20200413010540589173', 'comang', '', '911972228456');">
 										<td class="alignC">C0041301054052310004</td>
 										<td class="alignC"></td>
@@ -438,9 +398,6 @@
 										<td class="alignC">발행</td>
 										<td class="alignC">com_00000000000008</td>
 									</tr>
-
-
-
 
 								</tbody>
 
@@ -456,11 +413,7 @@
 				</div>
 			</section>
 		</section>
-
 		<!-- Header start -->
-
-
-
 		<script type="text/javascript">
 			var openPop;
 			function goFooterMenu(type) {
@@ -495,7 +448,6 @@
 		<footer>
 			<%@ include file="../include/footer.jsp"%>
 		</footer>
-
 
 		<!-- Header end -->
 	</div>

@@ -9,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="shortcut icon" href="/favicon.ico">
-<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/resources/images/favicon.ico" type="image/x-icon" />
 <title>로그인 EPOPKON</title>
 <meta name="Description" content="COUPON">
 <link rel="stylesheet" type="text/css" href="resources/css/common.css">
@@ -101,7 +101,7 @@
 			<c:if test="${member != null}">
 				<div class="log_in">
 				<a href="/signup" class="index_btn"><button class="">회원가입</button></a>
-				<a href="/user/user_main" class="index_btn"><button class=" ">발송관리</button></a>
+				<a href="/user/user_main" class="index_btn"><button class=" ">EPOPKON</button></a>
 				<c:if test="${member.level == 9}">
 					<a href="/user/admin" class="index_btn"><button class=" ">관리자 페이지</button></a>
 					<!-- <a href="/user/register" class="index_btn"><button class=" ">상품등록</button></a> -->

@@ -157,6 +157,7 @@ section p.loginon a button:hover{
 .log_in a button:hover {
 	border: 1px solid #4dd2ff;
 	background: #4dd2ff;
+	font-weight: bold;
 	color: #fff;
 	
 }
