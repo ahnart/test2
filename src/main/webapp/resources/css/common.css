@@ -8,7 +8,7 @@
 /* 수정 =-----------*/
 
 #wrap {
-	min-width: 1620px;
+	min-width: 100%;
 	min-height: 100%;
 	position: relative;
 	background: #fff; 
@@ -58,7 +58,6 @@
 	background: #b3e7ff;
 	/* border-top: #52527a 1px solid; */
 }
-/*------------------*/
 
 #gnb ul {
 	margin-left: 20px;
@@ -72,19 +71,25 @@
 #gnb li a {
 	display: block;
 	padding: 5px 10px 7px;
-	font-size: 14px;
+	font-size: 15px;
+	transition: all 0.2s;
 }
 
 #gnb li a.on {
-	background: #32c3c4;
-	border-radius: 2px;
+	background: #00b8e6;
+	border-radius: 6px;
 	color: #fff;
 }
 
-/* 수정---------------- */
+#gnb li a:hover {
+	background: #1ad1ff;
+	border-radius: 6px;
+	color: #fff;
+}
+
 #container {
 	padding-bottom: 150px;
-	width: 1620px;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -95,10 +100,10 @@
 }
 
 #nav li {
-	padding: 5px 20px;
-	font-size: 18px;
+	padding: 5px 14px;
+	font-size: 14px;
 	color: #52527a;
-	font-weight: bold;
+	letter-spacing: -1px;
 }
 
 #nav li a.on {
@@ -107,7 +112,7 @@
 }
 
 #section {
-	padding: 10px 0 0 120px;
+	padding: 10px 0 0 140px;
 }
 
 /* ---------------- */
@@ -758,7 +763,7 @@ button.double {
 }
 
 #popup #section {
-	padding: 0;
+	padding: 0px;
 }
 
 #popup .search {

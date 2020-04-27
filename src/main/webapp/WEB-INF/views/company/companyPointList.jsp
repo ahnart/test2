@@ -178,20 +178,24 @@
 			<%@ include file="../include/header.jsp"%>
 		</header>
 
-		<section id="gnb">
-			<div class="container">
-				<ul class="clearfix">
-					<li><a href="/user/user_main" class="companyMng">기업관리</a></li>
-
-					<li><a href="/user/buy_list" class="buyMng">구매관리</a></li>
-
-					<li><a href="/user/user_list" class="systemMng">시스템관리</a></li>
-				</ul>
-			</div>
-		</section>
-
 		<!-- Header end -->
-
+		
+		<c:if test="${member != null}">
+			<section id="gnb">
+				<div class="container">
+					<ul class="clearfix">
+						<li><a href="/user/user_main" class="companyMng on">기업관리</a></li>
+						<li><a href="/send/campaignList" class="sendMng">발송관리</a></li>
+						<li><a href="/user/buy_list" class="buyMng">구매관리</a></li>
+						<li><a href="/goods/goodsList.do" class="goodsMng">상품관리</a></li>
+						<li><a href="/account/accountListDay.do" class="accountMng">정산관리</a></li>
+						<li><a href="/user/user_list" class="systemMng">시스템관리</a></li>
+					</ul>
+				</div>
+			</section>
+			<!-- Header end -->
+		</c:if>
+		
 		<section id="container" class="clearfix">
 			<!-- LNB start -->
 
@@ -221,7 +225,7 @@
 					<div class="tabType01">
 						<ul class="clearfix">
 							<li id="companyBasic"><a href="/company/companyDetail">기본정보</a></li>
-							<li id="companyPoint"><a href="/company/companyPointList">금액정보</a></li>
+							<li id="companyPoint" class="on"><a href="/company/companyPointList">금액정보</a></li>
 							<li id="companyCommission"><a href="/company/companyCommisionList">수수료정보</a></li>
 							<!--<li id="companyDeco"><a onclick="javascript:commonGetUrl('/company/companyDecoList.do', 'user_id=comang');" >꾸미기정보</a></li>-->
 						</ul>

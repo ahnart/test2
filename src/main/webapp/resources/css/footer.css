@@ -20,7 +20,8 @@
 }
  
 .container {
-	width: 1620px;
+	width: 90%;
+	
 	margin: 0 auto;
 	text-align: left;
 }
@@ -49,7 +50,7 @@ footer .logo {
 	background-image: url(../images/epopkon_logo_b.png);
 	background-size: contain;
 	background-repeat: no-repeat; 
-	width: 117px;
+	width: 10%;
     height: 60px;
     text-indent: -9999px;
     margin-top: 40px;

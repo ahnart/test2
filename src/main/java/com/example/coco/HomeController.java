@@ -159,10 +159,78 @@ public class HomeController {
 			public void buyDetail(Model model) throws Exception {
 				logger.info("======= get buy buy Detail =======");	
 			}			
-					
-					
-					
-					
-					
-					
+
+//	User commCodeList  ===========================
+			@RequestMapping(value = "/user/commCodeList", method = RequestMethod.GET)
+			public void commCodeList(Model model) throws Exception {
+				logger.info("======= get User commCodeList =======");	
+			}
+			
+//	User commCodeDetail  ===========================
+			@RequestMapping(value = "/user/commCodeDetail", method = RequestMethod.GET)
+			public void commCodeDetail(Model model) throws Exception {
+				logger.info("======= get User commCodeDetail =======");	
+			}
+			
+//	User commCodeDetail  ===========================
+			@RequestMapping(value = "/user/insertCommCodeForm", method = RequestMethod.GET)
+			public void insertCommCodeForm(Model model) throws Exception {
+				logger.info("======= get User insertCommCodeForm =======");	
+			}
+			
+//	send campaignList  ===========================
+			@RequestMapping(value = "/send/campaignList", method = RequestMethod.GET)
+			public void campaignList(Model model) throws Exception {
+				logger.info("======= get send campaignList =======");	
+			}
+			
+//	send sendList  ===========================
+			@RequestMapping(value = "/send/sendList", method = RequestMethod.GET)
+			public void sendList(Model model) throws Exception {
+				logger.info("======= get send sendList =======");	
+			}
+			
+//	send sendFailList  ===========================
+			@RequestMapping(value = "/send/sendFailList", method = RequestMethod.GET)
+			public void sendFailList(Model model) throws Exception {
+				logger.info("======= get send sendFailList =======");	
+			}
+			
+//	goods goodsList  ===========================
+			@RequestMapping(value = "/goods/goodsList", method = RequestMethod.GET)
+			public void goodsList(Model model) throws Exception {
+				logger.info("======= get goods goodsList =======");	
+			}
+			
+//	goods goodsDetail  ===========================
+			@RequestMapping(value = "/goods/goodsDetail", method = RequestMethod.GET)
+			public void goodsDetail(Model model) throws Exception {
+				logger.info("======= get goods goodsDetail =======");	
+			}
+			
+//	goods dispGoodsList  ===========================
+			@RequestMapping(value = "/goods/dispGoodsList", method = RequestMethod.GET)
+			public void dispGoodsList(Model model) throws Exception {
+				logger.info("======= get goods dispGoodsList =======");	
+			}
+			
+//	goods dispGoodsList2  ===========================
+			@RequestMapping(value = "/goods/dispGoodsList2", method = RequestMethod.GET)
+			public void dispGoodsList2(Model model) throws Exception {
+				logger.info("======= get goods dispGoodsList =======");	
+			}
+			
+//	disp searchDispPop  ===========================
+			@RequestMapping(value = "/disp/searchDispPop", method = RequestMethod.GET)
+			public void searchDispList(Model model) throws Exception {
+				logger.info("======= get disp searchDispPop =======");	
+			}
+			
+//	send insertCampaignForm  ===========================
+			@RequestMapping(value = "/send/insertCampaignForm", method = RequestMethod.GET)
+			public void insertCampaignForm(Model model) throws Exception {
+				logger.info("======= get send insertCampaignForm =======");
+			}
+			
+			
 }

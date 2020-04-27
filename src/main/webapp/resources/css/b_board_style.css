@@ -10,7 +10,28 @@
 	background-repeat: no-repeat;
 	overflow: hidden;
 	position: relative;
+	/* animation: bgAni 1.5s forwards; 
+	opacity: 0;
+	filter: blur(50px);  */
 }
+
+/* @keyframes bgAni {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+         filter: blur(90px); 
+    }
+    60%{
+    	opacity: 0.4;
+    	 filter: blur(30px); 
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+         filter: blur(0); 
+    }
+} */
+
 
 /* 로고타이틀 --------------*/
 .epop_logo{
@@ -23,8 +44,10 @@
     height: 130px;
     text-indent: -9999px;
     margin-left: 50%;
+    opacity: 0;
     transform: translate(-50%, 50%);
-    animation: titAni1 1s forwards;
+    animation: logoAni 1s forwards;
+    /* animation-delay: 1s */
 }
 
 /* 인트로 애니메이션 -----------*/
@@ -34,7 +57,7 @@
     height: 270px;
     position: absolute;
     left: 50%;
-    bottom: -25px;
+    bottom: -40px;
     transform: translate(200px,-400px); 
     color: #fff;
     animation: titAni 1s forwards;
@@ -67,7 +90,7 @@
         opacity: 1;
     }
 }
-@keyframes titAni1{
+@keyframes logoAni{
     0%{
         transform: translate(-120px, 200px);
         opacity: 0;

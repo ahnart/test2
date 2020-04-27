@@ -49,6 +49,7 @@
 				// gnb setting end
 			});
 		</script>
+		
 		<header id="header" class="clearfix">
 			<%@ include file="./include/header.jsp"%>
 			<!-- 
@@ -64,11 +65,13 @@
 		</header>
 		
 		<!-- header end -->
+		
 		<div class="content_bg">
 			<div class="epop_logo">EPOP</div>
 			<div class="main_chr01 active">보라</div>
 			<div class="main_chr02 active">깨동이</div>
 		</div><!-- content_bg -->
+	
 		<section class="login">
 			
 			<c:if test="${member == null}">

@@ -16,11 +16,11 @@
 <!--[if lte IE 8]>
 	<link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen">
 <![endif]-->
-<script type="text/javascript" src="/js/jquery/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="/js/jquery/jquery-ui.js"></script>
-<script type="text/javascript" src="/js/common/ui.js"></script>
-<script type="text/javascript" src="/js/common/paging.js"></script>
-<script type="text/javascript" src="/js/common/common.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/jquery-ui.js"></script>
+<script type="text/javascript" src="/resources/js/ui.js"></script>
+<script type="text/javascript" src="/resources/js/paging.js"></script>
+<script type="text/javascript" src="/resources/js/commmon.js"></script>
 <script type="text/javascript"> 
 
 var iCurrPage = "";

@@ -307,18 +307,6 @@
 
 		</header>
 
-		<section id="gnb">
-			<div class="container">
-				<ul class="clearfix">
-					<li><a href="/user/user_main" class="companyMng">기업관리</a></li>
-
-					<li><a href="/user/buy_list" class="buyMng">구매관리</a></li>
-
-					<li><a href="/user/user_list" class="systemMng">시스템관리</a></li>
-				</ul>
-			</div>
-		</section>
-
 		<!-- Header end -->
 
 		<section id="container" class="clearfix">

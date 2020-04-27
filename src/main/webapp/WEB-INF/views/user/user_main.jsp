@@ -81,7 +81,7 @@
 
 <body>
 	<div id="wrap">
-		
+
 		<!-- Header start -->
 
 		<script type="text/javascript" src="/js/jquery/jquery.i18n.properties-1.0.9-min.js"></script>
@@ -108,32 +108,29 @@
 		</script>
 		<header id="header" class="clearfix">
 			<%@ include file="../include/header.jsp"%>
-			
 		</header>
-		
 
-		<section id="gnb">
-		<div class="container">
-				<ul class="clearfix">
-					<li><a href="/user/user_main" class="companyMng">기업관리</a></li>
-
-					<li><a href="/user/buy_list" class="buyMng">구매관리</a></li>
-
-					<li><a href="/user/user_list" class="systemMng">시스템관리</a></li>
-				</ul>
-			</div>
-		</section>
-
-		<!-- Header end -->
-
+		<c:if test="${member != null}">
+			<section id="gnb">
+				<div class="container">
+					<ul class="clearfix">
+						<li><a href="/user/user_main" class="companyMng on">기업관리</a></li>
+						<li><a href="/send/campaignList" class="sendMng">발송관리</a></li>
+						<li><a href="/user/buy_list" class="buyMng">구매관리</a></li>
+						<li><a href="/goods/goodsList.do" class="goodsMng">상품관리</a></li>
+						<li><a href="/account/accountListDay.do" class="accountMng">정산관리</a></li>
+						<li><a href="/user/user_list" class="systemMng">시스템관리</a></li>
+					</ul>
+				</div>
+			</section>
+			<!-- Header end -->
+		</c:if>
 		<section id="container" class="clearfix">
 			<!-- LNB start -->
 
-
-
 			<nav id="nav">
 				<ul>
-					<li><a href="/company/companyList.do" class="companyList">기업관리</a></li>
+					<li><a href="/user/user_main" class="companyList on">기업관리</a></li>
 				</ul>
 			</nav>
 			<!-- LNB end -->
@@ -141,7 +138,7 @@
 			<section id="section">
 				<!-- gnb start -->
 				<div class="bradcrumb">
-					<a href="/">CouponCMS</a> &gt; <a href="/company/companyList.do">기업관리</a> &gt; <a href="/company/companyList.do" class="on">기업목록</a>
+					<a href="/">CouponCMS</a> &gt; <a href="/user/user_main">기업관리</a> &gt; <a href="/user/user_main" class="on">기업목록</a>
 				</div>
 				<!-- gnb end -->
 				<form name="frm" id="frm" method="post">
@@ -174,7 +171,7 @@
 						</span>
 						<div class="comp">
 							<table class="tbType01">
-							<!-- 	<caption>기업목록</caption> -->
+								<!-- 	<caption>기업목록</caption> -->
 								<thead>
 									<tr>
 										<th>No</th>
@@ -193,7 +190,7 @@
 
 
 
-									<tr style="cursor: pointer;" >
+									<tr style="cursor: pointer;">
 										<td class="alignC">1</td>
 										<td class="alignC">매체사</td>
 										<td class="alignC">comang</td>
@@ -204,7 +201,124 @@
 										<td class="alignC">2015-10-16</td>
 									</tr>
 
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('testmhouse','G002');">
+										<td class="alignC">1</td>
+										<td class="alignC">상품공급사</td>
+										<td class="alignC">testmhouse</td>
+										<td class="alignC">(테)엠하우스[(테)엠하우스]</td>
+										<td class="alignC">(테)엠하우스</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2020-04-12</td>
+									</tr>
 
+
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('itemroad','M002');">
+										<td class="alignC">2</td>
+										<td class="alignC">매체사</td>
+										<td class="alignC">itemroad</td>
+										<td class="alignC">아이템로드2[(주)아이템로드2]</td>
+										<td class="alignC">방충기</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2017-03-17</td>
+									</tr>
+
+
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('baemin','G002');">
+										<td class="alignC">3</td>
+										<td class="alignC">상품공급사</td>
+										<td class="alignC">baemin</td>
+										<td class="alignC">배달의민족[(주)우아한형제들]</td>
+										<td class="alignC">권용철</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2017-03-16</td>
+									</tr>
+
+
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('dgmit','M002');">
+										<td class="alignC">4</td>
+										<td class="alignC">매체사</td>
+										<td class="alignC">dgmit</td>
+										<td class="alignC">디지엠정보기술 (주)[디지엠정보기술 (주)]</td>
+										<td class="alignC">박정민</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2017-02-21</td>
+									</tr>
+
+
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('cmmarketing','M002');">
+										<td class="alignC">5</td>
+										<td class="alignC">매체사</td>
+										<td class="alignC">cmmarketing</td>
+										<td class="alignC">씨엠마케팅[씨엠마케팅컴퍼니(주)]</td>
+										<td class="alignC">강현우</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2016-09-09</td>
+									</tr>
+
+
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('smilecon','G002');">
+										<td class="alignC">6</td>
+										<td class="alignC">상품공급사</td>
+										<td class="alignC">smilecon</td>
+										<td class="alignC">스마트콘[(주)즐거운]</td>
+										<td class="alignC">정원호</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2016-09-04</td>
+									</tr>
+
+
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('dstar','G002');">
+										<td class="alignC">7</td>
+										<td class="alignC">상품공급사</td>
+										<td class="alignC">dstar</td>
+										<td class="alignC">와이지리테일[(주)와이지리테일]</td>
+										<td class="alignC">이동우</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2016-06-21</td>
+									</tr>
+
+
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('aram','M002');">
+										<td class="alignC">8</td>
+										<td class="alignC">매체사</td>
+										<td class="alignC">aram</td>
+										<td class="alignC">아람커뮤니케이션[(주)아람커뮤니케이션]</td>
+										<td class="alignC">손상기</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2016-06-08</td>
+									</tr>
+
+
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('omnitel','G002');">
+										<td class="alignC">9</td>
+										<td class="alignC">상품공급사</td>
+										<td class="alignC">omnitel</td>
+										<td class="alignC">옴니텔[(주)옴니텔]</td>
+										<td class="alignC">이현주</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2016-05-24</td>
+									</tr>
+
+
+									<tr style="cursor: pointer;" onclick="javascript:goDetail('moneycon','G002');">
+										<td class="alignC">10</td>
+										<td class="alignC">상품공급사</td>
+										<td class="alignC">moneycon</td>
+										<td class="alignC">머니콘[(주)이포르테]</td>
+										<td class="alignC">소유정</td>
+										<!-- td class="alignC"></td-->
+										<td class="alignC"></td>
+										<td class="alignC">2016-04-18</td>
+									</tr>
 
 
 								</tbody>
@@ -216,8 +330,11 @@
 
 				<div class="sortArea">
 					<div class="paging mt20" id="paging">
-					<span class="paginator"><a class="on" href="javascript:goPageNo(1)" title="1" alt="1">1</a></span>
+						<span class="paginator"><a class="on" href="javascript:goPageNo(1)" title="1" alt="1">1</a></span>
+						<span class="paginator"><a class="" href="javascript:goPageNo(2)" title="2" alt="2">2</a></span>
+						<span class="paginator"><a class="" href="javascript:goPageNo(3)" title="3" alt="3">3</a></span>
 					</div>
+
 				</div>
 
 				<div class="btnArea alignR">
@@ -264,11 +381,10 @@
 
 		<footer>
 			<%@ include file="../include/footer.jsp"%>
-
 		</footer>
 
-		</div>
-		<!-- Header end -->
+	</div>
+	<!-- Header end -->
 
 </body>
 </html>

@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<header id="header" class="clearfix">
 	<div class="container">
 		<a href="/"><h1>이팝콘</h1></a>
 		<c:if test="${member == null}">
@@ -17,7 +18,7 @@
 				<div>
 					<div class="form">
 						<div class="findInfo">
-							<a href="#">아이디 찾기</a><a href="#">비밀번호 찾기</a><a href="/signup">회원가입</a>
+							<a href="/">로그인</a><a href="#">비밀번호 찾기</a><a href="/signup">회원가입</a>
 							<!-- <input type="checkbox" id="save"><label for="save">ID 저장</label> -->
 						</div>
 					</div>
@@ -34,8 +35,12 @@
 			
 		</section>
 		</c:if>
+		
+		
 	</div>
 	<!-- container -->
+	</header>
+	
 </body>
 </html>
 

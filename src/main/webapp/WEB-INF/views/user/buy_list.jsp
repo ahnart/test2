@@ -134,24 +134,31 @@
 		<header id="header" class="clearfix">
 			<%@ include file="../include/header.jsp"%>
 		</header>
-
-		<section id="gnb">
-			<div class="container">
-				<ul class="clearfix">
-					<li><a href="/user/user_main" class="companyMng">기업관리</a></li>
-					<li><a href="/user/buy_list" class="buyMng">구매관리</a></li>
-					<li><a href="/user/user_list" class="systemMng">시스템관리</a></li>
-				</ul>
-			</div>
-		</section>
-
 		<!-- Header end -->
+				
+		<c:if test="${member != null}">
+			<section id="gnb">
+				<div class="container">
+					<ul class="clearfix">
+						<li><a href="/user/user_main" class="companyMng ">기업관리</a></li>
+						<li><a href="/send/campaignList" class="sendMng">발송관리</a></li>
+						<li><a href="/user/buy_list" class="buyMng on">구매관리</a></li>
+						<li><a href="/goods/goodsList.do" class="goodsMng">상품관리</a></li>
+						<li><a href="/account/accountListDay.do" class="accountMng">정산관리</a></li>
+						<li><a href="/user/user_list" class="systemMng">시스템관리</a></li>
+					</ul>
+				</div>
+			</section>
+		</c:if>
+
+
 
 		<section id="container" class="clearfix">
 			<!-- LNB start -->
 			<nav id="nav">
 				<ul>
-					<li><a href="/buy/buyList.do" class="buyList">구매조회</a></li>
+					<li><a href="/user/buy_list.do" class="buyList on">구매조회</a></li>
+					<li><a href="/send/sendFailList.do" class="sendFailMng">발송실패관리</a></li>
 				</ul>
 			</nav>
 			<!-- LNB end -->

@@ -305,7 +305,7 @@
 		var w = 770;
 		var h = 600;
 		if("goodscom2"==type || "goodscom3"==type){
-			w = 1180;
+			w = 1880;
 		}
 		openPop = window.open(url, "searchPop", "width="+w+",height="+h);
 	}
