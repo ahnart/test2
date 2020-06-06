@@ -40,20 +40,19 @@
 	<!-- 업로드 패스 설정 -->
 	<bean class="java.lang.String" id="uploadPath">
 		<constructor-arg
-			value="D:\2020_JAVA\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring_EX_02_0327\resources" />
+			value="C:\Users\a\git\20200601\test2\src\main\webapp\resources\" />
 	</bean>
 	<bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver"
 		id="multipartResolver">
 		<property name="maxUploadSize" value="10485760" />
 	</bean>
 	
-
-
+	
 	<!-- bean 등록 -->
 	<context:component-scan base-package="com.example.dao"></context:component-scan>
 	<context:component-scan base-package="com.example.service"></context:component-scan>
 	<context:component-scan base-package="com.example.coco"></context:component-scan>
 	<context:component-scan base-package="com.example.dto"></context:component-scan>
 	<context:component-scan base-package="com.example.util"></context:component-scan>
-
+	<context:component-scan base-package="com.example.oauth"></context:component-scan>
 </beans>

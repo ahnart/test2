@@ -71,10 +71,10 @@
 			<div class="main_chr01 active">보라</div>
 			<div class="main_chr02 active">깨동이</div>
 		</div><!-- content_bg -->
-	
+		
 		<section class="login">
 			
-			<c:if test="${member == null}">
+			<c:if test="${member == null and ADMIN_ID == null}">
 				<form id="loginForm" name="loginForm" role="form" autocomplete="off" method="post" action="signin">
 					<div>
 						<div class="form">
@@ -85,6 +85,8 @@
 							<a href="/main/main">
 								<button class="btnType02 double">로그인</button>
 							</a>
+							<a href="/googleSignIn"><img height="40" alt="구글로그인" src="/resources/images/google.png"></a>
+							<a href=""><img height="40" alt="네이버" src="/resources/images/naver.png"></a>
 							<!-- <div><input type="checkbox" id="save"><label for="save">ID 저장</label></div> -->
 						</div>
 						<p class="noti" style="display: none;"></p>
@@ -97,15 +99,19 @@
 					</div>
 				</form>
 			</c:if>
-
-			<c:if test="${member != null}">
-				<div class="log_in">
-				<a href="/signup" class="index_btn"><button class="">회원가입</button></a>
+			
+			<c:if test="${member != null or ADMIN_ID != null}">
+				<div class="log_in"> 
+				
+				<!-- <a href="/signup" class="index_btn"><button class="">회원가입</button></a> -->
+				
 				<a href="/user/user_main" class="index_btn"><button class=" "><em>e</em> POPKON</button></a>
+				
 				<c:if test="${member.level == 9}">
 					<a href="/user/admin" class="index_btn"><button class=" ">관리자 페이지</button></a>
 					<!-- <a href="/user/register" class="index_btn"><button class=" ">상품등록</button></a> -->
 				</c:if>
+				
 					<a href="/user/goods_list?num=1" class="index_btn"><button class="">메인화면</button></a>
 					<a href="/signout" class="index_btn"><button class=" ">로그아웃</button></a>
 				</div>
