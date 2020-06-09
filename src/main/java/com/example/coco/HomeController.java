@@ -464,4 +464,32 @@ public class HomeController {
 		logger.info("======= get send insertCampaignForm =======");
 	}
 
+//	send campaignDetail  ===========================
+	@RequestMapping(value = "/send/campaignDetail", method = RequestMethod.GET)
+	public void insertCampaignDetail(Model model) throws Exception {
+		logger.info("======= get send campaignDetail =======");
+	}
+	
+	
+	
+//	send sendInsertForm  ===========================
+	@RequestMapping(value = "/send/sendInsertForm", method = RequestMethod.GET)
+	public void sendInsertForm(Model model) throws Exception {
+		logger.info("======= get send sendInsertForm =======");
+	}
+	
+	
+	
+//	send sendDetail  ===========================
+	@RequestMapping(value = "/send/sendDetail", method = RequestMethod.GET)
+	public void sendDetail(Model model) throws Exception {
+		logger.info("======= get send sendInsertForm =======");
+	}
+	
+	
+//	send sendDetailReceive  ===========================
+	@RequestMapping(value = "/send/sendDetailReceive", method = RequestMethod.GET)
+	public void sendDetailReceive(Model model) throws Exception {
+		logger.info("======= get send sendDetailReceive =======");
+	}
 }

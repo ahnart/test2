@@ -237,7 +237,7 @@
 					<div class="paging mt20" id="paging"></div>
 				</div>
 				<div class="btnArea alignR">
-					<a class="btnType05" href="/send/insertSendForm.do">등록</a>
+					<a class="btnType05" href="/send/sendInsertForm.do">등록</a>
 				</div>
 			</section>
 		</section>

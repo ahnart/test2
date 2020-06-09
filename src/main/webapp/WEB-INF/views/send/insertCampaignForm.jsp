@@ -217,7 +217,8 @@ $(document).ready(function() {
 			</div>
 			</form>
 			<div class="btnArea alignR">
-				<a class="btnType05" onclick="javascript:insertCampaign();">등록</a>
+			<!-- 	<a class="btnType05" onclick="javascript:insertCampaign();">등록</a> -->
+				<a class="btnType04" href="/send/campaignDetail.do">등록</a>
 				<a class="btnType04" href="/send/campaignList.do">목록보기</a>
 			</div>
 		</section>
